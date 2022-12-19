@@ -1,0 +1,120 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 3px;
+    left: 249px;
+    animation: animateCenter 3.333s linear infinite;
+}
+
+.center span {
+    width: 35px;
+    height: 15rem;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    background: #2f2;
+    z-index: 1;
+}
+
+.center span:first-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.center span:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.center span:nth-child(4) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.center span:nth-child(5) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* center circle */
+
+.center span:nth-child(6) {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: bottom;
+    box-shadow: 0 0 20px 3px grey,inset 0 0 20px 3px grey;
+    border: 1px solid black;
+    z-index: 999;
+}
+
+.center span:nth-child(7) {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: bottom;
+    border: 1px solid black;
+    box-shadow: 0 0 20px 3px grey,inset 0 0 20px 3px grey;
+    z-index: 999;
+}
+
+.center span:nth-child(8) {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: bottom;
+    background-color:rgb(82 78 78 / 63%);
+    border: 1px solid black;
+    box-shadow: 0 0 20px 3px grey;
+    z-index: 999;
+}
+
+/* circle */
+.center::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    height: 175px;
+    width: 175px;
+    background-color: #2f2;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 70;
+}
+
+.center::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    height: 175px;
+    width: 175px;
+    background-color: #2f2;
+    border: 2px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@keyframes animateCenter {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

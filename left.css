@@ -1,0 +1,124 @@
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: animate 5s linear infinite;
+}
+
+.left span {
+    width: 35px;
+    height: 20rem;
+    text-align: center;
+    border: 2px solid black; 
+    background: #2f2;
+    z-index: 1;
+}
+
+.left span:first-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.left span:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.left span:nth-child(4) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+.left span:nth-child(5) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(58deg);
+}
+
+.left span:nth-child(6) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(121deg);
+}
+
+.left span:nth-child(7) {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: bottom;
+    box-shadow: 0 0 20px 3px grey,inset 0 0 20px 3px grey;
+    border: 1px solid black;
+    z-index: 999;
+}
+
+.left span:nth-child(8) {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: bottom;
+    border: 1px solid black;
+    box-shadow: 0 0 20px 3px grey,inset 0 0 20px 3px grey;
+    z-index: 999;
+}
+
+.left span:nth-child(9) {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: bottom;
+    background-color:rgb(82 78 78 / 63%);
+    border: 1px solid black;
+    box-shadow: 0 0 20px 3px grey;
+    z-index: 999;
+}
+
+/* circle */
+.left::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    height: 250px;
+    width: 250px;
+    background-color: #2f2;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 70;
+}
+
+.left::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    height: 250px;
+    width: 250px;
+    background-color: #2f2;
+    border: 2px solid black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* end circle */
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
